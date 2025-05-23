@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a2e; /* Dark blue/purple */
+    color: #e0e0e0; /* Light grey text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #162447; /* Slightly lighter dark blue */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 90%;
+}
+
+header h1 {
+    font-family: 'Press Start 2P', cursive; /* Pixel/retro font */
+    color: #1f4068; /* A contrasting blue */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px #e43f5a; /* Reddish shadow for retro feel */
+    color: #f1f1f1; /* Brighter text for header */
+}
+
+.logo {
+    max-width: 150px; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #1f7a8c; /* Teal color */
+    margin-bottom: 20px;
+}
+
+.subtext {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #bfd7ea; /* Lighter blue */
+    margin-bottom: 30px;
+}
+
+a {
+    color: #e43f5a; /* Reddish link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .tagline {
+        font-size: 1.5em;
+    }
+    .container {
+        padding: 30px;
+    }
+}

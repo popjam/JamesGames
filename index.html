@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Games - Coming Soon!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- You can put a logo image here if you have one -->
+        <!-- <img src="logo.png" alt="James Games Logo" class="logo"> -->
+        <h1>JAMES GAMES</h1>
+      </header>
+      <main>
+        <p class="tagline">Awesome Games Coming Soon!</p>
+        <p class="subtext">Stay tuned for exciting updates and releases.</p>
+        <!-- Optional: Add a link to a social media or contact later -->
+        <!-- <p><a href="mailto:contact@jamesgames.au">Get in Touch</a></p> -->
+      </main>
+      <footer>
+        <p>© <span id="year"></span> James Games. All rights reserved.</p>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
