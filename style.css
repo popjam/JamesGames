@@ -107,3 +107,32 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     /* Optional: adds a subtle shadow */
 }
+
+/* Animation for the bounce effect */
+@keyframes dogBounce {
+    0% {
+        transform: scale(1);
+        /* Start at normal size */
+    }
+
+    50% {
+        transform: scale(1.2);
+        /* Increase size to 120% at the halfway point */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Return to normal size */
+    }
+}
+
+/* Class to apply the bounce animation */
+.dog-is-bouncing {
+    animation-name: dogBounce;
+    animation-duration: 1s;
+    /* Total duration of the bounce */
+    animation-timing-function: ease-in-out;
+    /* Makes the animation smooth */
+    animation-fill-mode: forwards;
+    /* Keeps the final state (though here it's back to normal) */
+}

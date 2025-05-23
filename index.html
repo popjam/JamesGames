@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>James Games - Coming Soon!</title>
+    <title>James Games</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;700&display=swap"
@@ -25,15 +25,40 @@
         />
         <p class="tagline">Awesome Games Coming Soon!</p>
         <p class="subtext">Stay tuned for exciting updates and releases.</p>
-        <!-- Optional: Add a link to a social media or contact later -->
-        <!-- <p><a href="mailto:contact@jamesgames.au">Get in Touch</a></p> -->
       </main>
       <footer>
         <p>© <span id="year"></span> James Games. All rights reserved.</p>
       </footer>
     </div>
+
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Dog bounce animation script
+      const dogImage = document.querySelector(".dog-mascot");
+
+      if (dogImage) {
+        dogImage.addEventListener("click", function () {
+          // Remove the class if it's already there to allow re-triggering
+          dogImage.classList.remove("dog-is-bouncing");
+
+          // This is a trick to force a reflow, ensuring the animation restarts
+          // if clicked quickly multiple times.
+          void dogImage.offsetWidth;
+
+          // Add the class to trigger the animation
+          dogImage.classList.add("dog-is-bouncing");
+
+          // Optional: Remove the class after the animation completes
+          // so it can be triggered again without the reflow trick being strictly necessary
+          // (though the reflow trick makes it more robust for rapid clicks).
+          // The animation-fill-mode: forwards handles keeping the final state if needed,
+          // but our animation naturally returns to scale(1).
+          // setTimeout(() => {
+          //     dogImage.classList.remove('dog-is-bouncing');
+          // }, 1000); // 1000ms = 1 second (must match animation-duration)
+        });
+      }
     </script>
   </body>
 </html>
